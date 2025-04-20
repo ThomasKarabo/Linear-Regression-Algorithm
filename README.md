@@ -1,48 +1,172 @@
-# Linear Regression Algorithm
+# **Linear Regression from Scratch**
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+This repository contains a complete implementation of **Linear Regression** built from scratch, along with essential preprocessing and evaluation tools. The project demonstrates how machine learning algorithms work under the hood without relying on libraries like `scikit-learn`.
 
-This repository contains my attempt at creating a linear regression algorithm from scratch. It demonstrates the fundamental principles of linear regression and provides insight into the mechanics of this widely-used machine learning technique.
+---
 
-## Table of Contents
+## **📁 Repository Structure**
+```
+linear-regression-from-scratch/
+│
+├── 📂 models/
+│   ├── linear_regression.py     # Linear Regression implementation
+│
+├── 📂 preprocessing/
+│   ├── onehot_encoder.py       # OneHotEncoder for categorical features
+│   ├── standard_scaler.py      # StandardScaler for feature normalization
+│   ├── simple_imputer.py       # SimpleImputer for handling missing values
+│
+├── 📂 metrics/
+│   ├── regression_metrics.py   # MSE, R² Score, and other regression metrics
+│
+├── 📂 utils/
+│   ├── train_test_split.py     # Custom train-test split implementation
+│
+├── 📜 notebook.ipynb           # Jupyter Notebook with full pipeline example
+├── 📜 README.md                # This file
+```
 
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+---
 
-## Overview
+## **📦 Classes Overview**
 
-Linear regression is a basic yet powerful supervised learning algorithm used for predicting continuous outcomes. This project implements the algorithm from scratch using Python and Jupyter Notebook to provide educational insight into its workings.
+### **1. `LinearRegression`**
+**Location:** `models/linear_regression.py`  
+**Description:**  
+- Implements linear regression using **gradient descent**.
+- Supports training with customizable learning rate and iterations.
+- Provides predictions using learned weights and bias.
 
-## Features
+**Methods:**
+- `fit(X, y)` - Trains the model on feature matrix `X` and target `y`.
+- `predict(X)` - Returns predictions for new data `X`.
+- `feature_importance()` - Returns sorted feature weights.
 
-- Clear and concise implementation of linear regression.
-- Demonstrates gradient descent for model optimization.
-- Includes example datasets for testing and visualization.
-- Interactive notebooks for hands-on learning.
+---
 
-## Installation
+### **2. Preprocessing Classes**
 
-1. Clone the repository:
+#### **`OneHotEncoder`**
+**Location:** `preprocessing/onehot_encoder.py`  
+**Description:**  
+- Encodes categorical variables into one-hot vectors.
+- Handles unknown categories during transformation.
+
+**Methods:**
+- `fit(X)` - Learns unique categories.
+- `transform(X)` - Converts categorical data to one-hot encoding.
+- `fit_transform(X)` - Combines `fit` and `transform`.
+
+#### **`StandardScaler`**
+**Location:** `preprocessing/standard_scaler.py`  
+**Description:**  
+- Standardizes features by removing mean and scaling to unit variance.
+
+**Methods:**
+- `fit(X)` - Computes mean and standard deviation.
+- `transform(X)` - Scales features.
+- `fit_transform(X)` - Combines `fit` and `transform`.
+
+#### **`SimpleImputer`**
+**Location:** `preprocessing/simple_imputer.py`  
+**Description:**  
+- Fills missing values using mean, median, or a constant.
+
+**Methods:**
+- `fit(X)` - Computes imputation strategy.
+- `transform(X)` - Fills missing values.
+- `fit_transform(X)` - Combines `fit` and `transform`.
+
+---
+
+### **3. `RegressionMetrics`**
+**Location:** `metrics/regression_metrics.py`  
+**Description:**  
+- Computes evaluation metrics for regression models.
+
+**Methods:**
+- `mse()` - Mean Squared Error.
+- `r2_score()` - R² Score (coefficient of determination).
+- `mae()` - Mean Absolute Error (optional).
+
+---
+
+### **4. `TrainTestSplit`**
+**Location:** `utils/train_test_split.py`  
+**Description:**  
+- Splits data into training and test sets.
+- Supports shuffling and random seed for reproducibility.
+
+**Methods:**
+- `split(X, y)` - Returns `(X_train, X_test, y_train, y_test)`.
+
+---
+
+## **📒 Jupyter Notebook (`notebook.ipynb`)**
+The notebook demonstrates:
+1. **Data Loading & Exploration**  
+   - Loads the housing dataset.
+   - Examines feature distributions.
+
+2. **Preprocessing Pipeline**  
+   - Handles numerical and categorical features.
+   - Applies scaling and one-hot encoding.
+
+3. **Model Training & Evaluation**  
+   - Trains `LinearRegression` from scratch.
+   - Evaluates using `RegressionMetrics`.
+
+4. **Feature Importance Analysis**  
+   - Identifies which features most influence predictions.
+
+---
+
+## **🚀 How to Use**
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ThomasKarabo/Linear-Regression-Algorithm.git
-   cd Linear-Regression-Algorithm
+   git clone https://github.com/yourusername/linear-regression-from-scratch.git
+   cd linear-regression-from-scratch
+   ```
 
-## Contributing
-Contributions are welcome! If you have suggestions for improvements or new features, feel free to fork this repository, make changes, and submit a pull request.
+2. **Install dependencies:**
+   ```bash
+   pip install numpy pandas matplotlib
+   ```
 
-Fork the repository.
-Create a new branch: git checkout -b feature-name.
-Commit your changes: git commit -m 'Add some feature'.
-Push to the branch: git push origin feature-name.
-Open a pull request.
+3. **Run the notebook:**
+   ```bash
+   jupyter notebook notebook.ipynb
+   ```
 
-## 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+4. **Import modules in your own scripts:**
+   ```python
+   from models.linear_regression import LinearRegression
+   from preprocessing.standard_scaler import StandardScaler
+   from metrics.regression_metrics import RegressionMetrics
+   ```
 
-Feel free to reach out if you have any questions or feedback.
+---
+
+## **🔍 Key Takeaways**
+✅ **Built from scratch** – No reliance on `scikit-learn`.  
+✅ **Modular design** – Easy to extend with new features.  
+✅ **End-to-end pipeline** – From preprocessing to evaluation.  
+✅ **Educational** – Great for understanding ML fundamentals.  
+
+---
+
+## **📈 Future Improvements**
+- Add **regularization** (Lasso/Ridge).
+- Implement **cross-validation**.
+- Support **pandas DataFrames** natively.
+- Add **visualizations** for residuals and predictions.
+
+---
+
+## **📜 License**
+This project is open-source under the **MIT License**.  
+
+---
+
+**🌟 Enjoyed this project?**  
+Give it a ⭐ on [GitHub](https://github.com/yourusername/linear-regression-from-scratch)! Contributions are welcome. 🚀
