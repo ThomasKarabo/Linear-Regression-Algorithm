@@ -23,10 +23,11 @@ predictions = model.predict(X_test)
 # Inspect learned weights
 print("Weights:", model.weights)
 print("Bias:", model.bias)
-```
-## Key Methods
+
+Key Methods
 fit(X, y): Trains the model on feature matrix X and target y
 
 predict(X): Returns predictions for new data
 
 feature_importance(): Returns weights sorted by absolute value
+```
