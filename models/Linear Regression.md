@@ -1,5 +1,3 @@
-📂 models/linear_regression.py
-markdown
 # Linear Regression Implementation
 
 A gradient descent-based linear regression model.
