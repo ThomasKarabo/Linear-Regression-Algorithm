@@ -78,6 +78,6 @@ transform(X): Applies imputation to new data
 fit_transform(X): Combines both steps
 ```
 #### Important Notes
--Automatically handles only numeric columns by default
--For constant strategy, always specify fill_value
--Preserves the original data structure and column order
+- Automatically handles only numeric columns by default
+- For constant strategy, always specify fill_value
+- Preserves the original data structure and column order
