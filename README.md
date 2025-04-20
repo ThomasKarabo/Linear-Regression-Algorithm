@@ -124,7 +124,7 @@ The notebook demonstrates:
 ## **🚀 How to Use**
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/linear-regression-from-scratch.git
+   git clone [https://github.com/yourusername/linear-regression-from-scratch.git](https://github.com/ThomasKarabo/Linear-Regression-Algorithm.git)
    cd linear-regression-from-scratch
    ```
 
