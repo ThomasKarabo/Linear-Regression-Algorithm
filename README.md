@@ -31,3 +31,18 @@ Linear regression is a basic yet powerful supervised learning algorithm used for
    ```bash
    git clone https://github.com/ThomasKarabo/Linear-Regression-Algorithm.git
    cd Linear-Regression-Algorithm
+
+## Contributing
+Contributions are welcome! If you have suggestions for improvements or new features, feel free to fork this repository, make changes, and submit a pull request.
+
+Fork the repository.
+Create a new branch: git checkout -b feature-name.
+Commit your changes: git commit -m 'Add some feature'.
+Push to the branch: git push origin feature-name.
+Open a pull request.
+
+## 
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Feel free to reach out if you have any questions or feedback.
