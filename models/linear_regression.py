@@ -28,3 +28,10 @@ class LinearRegression:
     
     def predict(self, X):
         return np.dot(X, self.weights) + self.bias
+
+# To add the Lasso and Ridge regression algorithms
+class Lasso:
+    pass
+
+class Ridge:
+    pass
