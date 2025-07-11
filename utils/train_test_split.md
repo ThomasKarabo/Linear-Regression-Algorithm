@@ -2,6 +2,14 @@
 
 Splits data into training and testing sets.
 
+## Setup
+- First clone the repo by using the command: ```!git clone https://github.com/ThomasKarabo/linear-regression-from-scratch.git```
+- Append the directory of the algorithm by running the code</br>
+```python
+import sys
+sys.path.append('/content/linear-regression-from-scratch/utils')
+```
+
 ## How It Works
 - Randomly divides data while maintaining proportions
 - Optional shuffling for randomness
