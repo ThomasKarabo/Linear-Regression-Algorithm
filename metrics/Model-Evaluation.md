@@ -2,6 +2,15 @@
 
 Evaluates model performance.
 
+## Setup
+- First clone the repo by using the command below </br>
+```!git clone https://github.com/ThomasKarabo/linear-regression-from-scratch.git```
+- Append the directory of the algorithm by running the code</br>
+```python
+import sys
+sys.path.append('/content/linear-regression-from-scratch/metrics')
+```
+
 ## Available Metrics
 1. **MSE (Mean Squared Error)**: 
    - Average squared difference between predictions and true values
