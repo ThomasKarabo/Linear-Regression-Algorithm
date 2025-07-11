@@ -6,7 +6,12 @@ A gradient descent-based linear regression model.
 - Learns weights to predict targets using a linear combination of features
 - Optimizes weights using gradient descent to minimize prediction error
 - Supports customizable learning rate and training iterations
-
+## Setup
+- First clone the repo by using the command below
+```!git clone https://github.com/ThomasKarabo/linear-regression-from-scratch.git```
+- Append the directory of the algorithm by running the code
+  ```import sys
+sys.path.append('/content/linear-regression-from-scratch/models')```
 ## Usage
 ```python
 from linear_regression import LinearRegression
