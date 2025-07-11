@@ -1,5 +1,13 @@
 # Feature Engineering
 Feature engineering using Standard Scaler, OneHotEncoder and a SimpleImputer
+
+## Setup
+- First clone the repo by using the command: ```!git clone https://github.com/ThomasKarabo/linear-regression-from-scratch.git```
+- Append the directory of the algorithm by running the code</br>
+```python
+import sys
+sys.path.append('/content/linear-regression-from-scratch/metrics')
+```
 ## 1. Standard Scaler
 
 Normalizes features to have zero mean and unit variance.
