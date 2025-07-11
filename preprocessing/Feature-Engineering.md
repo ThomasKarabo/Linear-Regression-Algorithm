@@ -6,7 +6,7 @@ Feature engineering using Standard Scaler, OneHotEncoder and a SimpleImputer
 - Append the directory of the algorithm by running the code</br>
 ```python
 import sys
-sys.path.append('/content/linear-regression-from-scratch/metrics')
+sys.path.append('/content/linear-regression-from-scratch/preprocessing')
 ```
 ## 1. Standard Scaler
 
